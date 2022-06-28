@@ -22,11 +22,23 @@ const list = document.querySelector('#shopping-list ul')
 
 // CREO I TAG LI CON WHILE
 
-let item = ``;
+// let item = ``;
+// i = 0
+// while (i < shoppingList.length) {
+//     item += `<li>${shoppingList[i]}</li>`
+//     i++
+// }
+
+// list.innerHTML = item
+
+// CREO I TAG LI CON WHILE E STAMPO CON APPEND
+
 i = 0
 while (i < shoppingList.length) {
-    item += `<li>${shoppingList[i]}</li>`
-    i++
+    let li = document.createElement("li")
+    li.append(shoppingList[i]);
+    i++;
+    list.append(li)
 }
 
-list.innerHTML = item
+
